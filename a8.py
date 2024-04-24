@@ -28,11 +28,21 @@ voter_data = [
 ]
 
 
-voter_nn = NeuralNet(5, 1, 1)
+voter_nn = NeuralNet(5, 6, 1)
 
 voter_nn.train(voter_data)
 
 print(voter_nn.test_with_expected(voter_data))
+
+print(voter_nn.test([
+
+[1,1,1,.1,.1],
+[.5,.2,.1,.7,.7],
+[.8,.3,.3,.3,.8],
+[.8,.3,.3,.8,.3],
+[.9,.8,.8,.3,.6]
+
+]))
 
 
 
